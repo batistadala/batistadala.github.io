@@ -1,0 +1,370 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;/*1rem=10px*/
+}
+
+
+body {
+    font-family: "system-ui", sans-serif;
+    font-size: 1.6rem;/*16 px*/
+    line-height: 1.5;
+
+    background-color: #0f1220;
+    color: #e7e9f3;
+}
+.collapse-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+    opacity: 0;
+
+}
+
+.collapse-conten.open {
+    max-height: 500px;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+    opacity: 0;
+
+}
+
+body.light {
+    font-family: "system-ui", sans-serif;
+    font-size: 1.6rem;/*16 px*/
+    line-height: 1.5;
+
+    background-color: #ffffff;
+    color: #2c2f34;
+}
+
+button {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.6rem;/*16 px*/
+
+    border: none;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: #e7e9f3;
+}
+body.light a{
+    text-decoration: none;
+    color: #141416;
+}
+
+svg {
+    width: 1.6rem;
+    height: 1.6rem;
+    fill: #e7e9f3;
+}
+body.light svg {
+    width: 1.6rem;
+    height: 1.6rem;
+    fill: #10152a;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+ul ul {
+    margin-left: 1.5rem;
+}
+
+.container {
+    width: 80%;
+    max-width: 1024px;
+    margin: 2rem auto;
+
+    padding: 2rem;
+    background-color: #121530;
+
+    border: 1px solid #7f84a5;
+    border-radius: 2rem;
+}
+body.light .container {
+    width: 80%;
+    max-width: 1024px;
+    margin: 2rem auto;
+
+    padding: 2rem;
+    background-color: #ffffff;
+
+    border: 1px solid #121315;
+    border-radius: 2rem;
+}
+
+.image {
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+
+    border: 2px solid #7f84a5;
+    border-radius: 50%;
+
+    flex-shrink: 0;
+}
+
+body.light .image {
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+
+    border: 2px solid #7f84a5;
+    border-radius: 50%;
+
+    flex-shrink: 0;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 4.6rem;/*16 px*/
+    color: #47bca4;
+    margin-bottom: 2.5rem;
+}
+h2 {
+    font-size: 1.6rem;/*16 px*/
+    color: #47bca4;
+    margin-bottom: 2.5rem;
+    display: inline-block;
+    padding: 0.25rem 0.7rem;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 999px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+body.light h2 {
+    font-size: 1.6rem;/*16 px*/
+    color: #47bca4;
+    margin-bottom: 2.5rem;
+    display: inline-block;
+    padding: 0.25rem 0.7rem;
+    background: rgba(2, 60, 2, 0.06);
+    border-radius: 999px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+header > p {
+    margin-bottom: 2.5rem;
+}
+
+.socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    margin-bottom: 2.5rem;
+}
+
+.socials a {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    padding: 1.5rem;
+    border: 1px solid #7f84a5;
+    border-radius: 1rem;
+
+    transition: filter 0.2s ease, transform 0.5s ease;
+    
+    
+}
+
+body.light .socials a {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    padding: 1.5rem;
+    border: 1px solid #7f84a5;
+    border-radius: 1rem;
+
+    transition: filter 0.2s ease, transform 0.5s ease;
+}
+
+
+#toggle-welcome {
+    font-weight: bold;
+    border-radius: 1rem;
+    padding: 1.2rem 1.5rem;
+    
+    background: linear-gradient(to right, #78a6f8, #5de8cc);
+    box-shadow: 2px 2px 10px rgba(92, 232, 204, 0.4);
+
+    transition: filter 0.2s ease, transform 0.5s ease;
+
+    margin-bottom: 2rem;
+}
+
+#toggle-welcome:hover,
+.socials a:hover {
+    filter: brightness(0.9);
+    transform: scale(1.1);
+
+}
+
+#bem-vindo {
+    border-radius: 1rem;
+    
+
+    transition: filter 0.2s ease, transform 0.1s ease;
+
+}
+
+#bem-vindo:hover,
+.socials a:hover {
+    filter: brightness(0.9);
+    transform: scale(1.009);
+
+}
+#sobre-mim {
+    border-radius: 1rem;
+   
+    transition: filter 0.2s ease-in, transform 0.1s ease;
+}
+
+#sobre-mim:hover,
+.socials a:hover {
+    filter: brightness(1);
+    transform: scale(1.009);
+
+}
+
+#experiencia {
+    border-radius: 1rem;
+   
+    transition: filter 0.2s ease, transform 0.1s ease;
+
+}
+
+#experiencia:hover,
+.socials a:hover {
+    filter: brightness(1);
+    transform: scale(1.009);
+
+}
+
+#educacao {
+    border-radius: 1rem;
+   
+    transition: filter 0.2s ease, transform 0.1s ease;
+
+}
+
+#educacao:hover,
+.socials a:hover {
+    filter: brightness(1);
+    transform: scale(1.009);
+
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.welcome p, .bio, .experience, .education {
+    padding: 1.5rem;
+
+    background-color: #0f1531;
+    
+    border: 1px solid #7f84a5;
+    border-radius: 1rem;
+}
+
+.light .welcome p, .light .bio, .light .experience, .light .education {
+    padding: 1.5rem;
+
+    background-color: #ffffff;
+    
+    border: 1px solid #78a6f8;
+    border-radius: 1rem;
+}
+
+.welcome p {
+    background-color: #1d2143;
+    border-style: dashed;
+}
+
+.light .welcome p {
+    background-color: #ffffff;
+    border-style: dashed;
+}
+
+.bio h2, .experience h2, .education h2 {
+    margin-bottom: 1.5rem;
+}
+
+.experience span, .education span {
+    font-weight: bold;
+}
+
+footer {
+    padding: 2rem;
+
+    text-align: center;
+    color: #7f84a5;
+}
+
+body.light footer {
+    padding: 2rem;
+
+    text-align: center;
+    color: #0d0b09;
+}
+
+@media(max-width: 425px){
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+.theme-btn {
+    position: absolute;
+    top: 24px;
+    right: 164px;
+
+    padding: 0.3rem 1.4rem;
+    border-radius: 1rem;
+    background: linear-gradient(to right, #5de8cc, #78a6f8);
+
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    color: #121530;
+
+    box-shadow: 2px 2px 10px rgba(92, 232, 204, 0.4);
+    transition: filter 0.2s ease, transform 0.5s ease;
+}
+
+
+.theme-btn:hover {
+    filter: brightness(0.9);
+    transform: scale(1.1);
+}
+
+
